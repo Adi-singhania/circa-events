@@ -1,0 +1,130 @@
+.pageWrap {
+  padding: 2.5rem 0 5rem;
+}
+
+.backBar {
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-ink);
+  transition: color var(--transition-fast);
+}
+
+.backLink:hover {
+  color: var(--accent-vermilion);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+
+.dossierCard {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  box-shadow: 4px 4px 0px var(--border-strong);
+  border-radius: var(--radius-xs);
+  padding: 2rem;
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--accent-vermilion);
+  margin-bottom: 0.5rem;
+}
+
+.dossierTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3.2vw, 2.375rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-ink);
+  margin-bottom: 0.75rem;
+}
+
+.dossierTagline {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.imgWrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  margin-bottom: 1.5rem;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.specList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.specItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-ink);
+}
+
+.specIcon {
+  color: var(--accent-vermilion);
+  flex-shrink: 0;
+}
+
+.formCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  box-shadow: 5px 5px 0px var(--border-strong);
+  border-radius: var(--radius-xs);
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.formHeader {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-rule);
+}
+
+.formTitle {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-ink);
+  margin-bottom: 0.35rem;
+}
+
+.formSubtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

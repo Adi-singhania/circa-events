@@ -1,0 +1,63 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.speakerCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-rule);
+  border-radius: var(--radius-xs);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.speakerCard:hover {
+  border-color: var(--accent-vermilion);
+  transform: translateY(-2px);
+}
+
+.avatarWrap {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  flex-shrink: 0;
+  background-color: var(--bg-surface);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--text-ink);
+  margin-bottom: 0.25rem;
+}
+
+.role {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent-vermilion);
+  margin-bottom: 0.2rem;
+}
+
+.company {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
