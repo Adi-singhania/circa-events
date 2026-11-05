@@ -1,0 +1,64 @@
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(3rem, 6vw, 5rem) 1.5rem;
+  background-color: var(--bg-card);
+  border: 1px dashed var(--border-rule);
+  border-radius: var(--radius-xs);
+  margin: 1.5rem 0;
+}
+
+.stampBadge {
+  width: 64px;
+  height: 64px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: 2px 2px 0px var(--border-strong);
+}
+
+.icon {
+  color: var(--accent-vermilion);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-ink);
+  margin-bottom: 0.5rem;
+}
+
+.message {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  max-width: 420px;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.resetBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--text-ink);
+  color: var(--bg-canvas);
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.resetBtn:hover {
+  background-color: var(--accent-vermilion);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}

@@ -1,0 +1,63 @@
+.scrollContainer {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0.5rem 0 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.chipsRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: max-content;
+  min-width: 100%;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-rule);
+  color: var(--text-ink);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.chip:hover {
+  border-color: var(--accent-vermilion);
+  transform: translateY(-1px);
+}
+
+.chipActive {
+  background-color: var(--text-ink);
+  color: var(--bg-canvas);
+  border-color: var(--text-ink);
+  box-shadow: 2px 2px 0px var(--accent-vermilion);
+}
+
+.catLabel {
+  letter-spacing: 0.02em;
+}
+
+.countBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: var(--radius-xs);
+  background-color: var(--bg-surface);
+  color: var(--text-muted);
+}
+
+.chipActive .countBadge {
+  background-color: var(--accent-vermilion);
+  color: #FFFFFF;
+}

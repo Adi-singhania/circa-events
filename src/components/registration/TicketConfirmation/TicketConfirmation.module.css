@@ -1,0 +1,309 @@
+.confirmationWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.checkHeader {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkCircle {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.checkSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.checkCirclePath {
+  stroke: var(--secondary-olive);
+  stroke-width: 3;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  animation: strokeCircle 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkMarkPath {
+  stroke: var(--secondary-olive);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: strokeCheck 0.4s cubic-bezier(0.65, 0, 0.45, 1) 0.5s forwards;
+}
+
+@keyframes strokeCircle {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes strokeCheck {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--accent-vermilion);
+  margin-bottom: 0.35rem;
+}
+
+.confirmTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--text-ink);
+  margin-bottom: 0.5rem;
+}
+
+.confirmSub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+/* Ticket Stub */
+.ticketStub {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-xs);
+  box-shadow: 4px 4px 0px var(--border-strong);
+  text-align: left;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.stubTop {
+  padding: 1.5rem 1.75rem 1.25rem;
+}
+
+.stubHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.875rem;
+}
+
+.stubBrand {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--text-subtle);
+}
+
+.bookingRefBadge {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.6rem;
+  background-color: var(--accent-vermilion-tint);
+  border: 1px solid var(--accent-vermilion-border);
+  color: var(--accent-vermilion);
+  border-radius: var(--radius-xs);
+}
+
+.eventTitle {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--text-ink);
+  margin-bottom: 1.25rem;
+}
+
+.eventDetailsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.detailCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.metaLabel {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-subtle);
+}
+
+.metaValue {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-ink);
+  line-height: 1.35;
+}
+
+/* Perforation with notches */
+.perforationWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+}
+
+.notch {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: var(--bg-canvas);
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.notchLeft {
+  left: -10px;
+}
+
+.notchRight {
+  right: -10px;
+}
+
+.dashedRule {
+  width: 100%;
+  border-top: 1px dashed var(--border-strong);
+}
+
+.stubBottom {
+  padding: 1rem 1.75rem 1.25rem;
+  background-color: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.barcodeSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.fauxBarcode {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.barcodeText {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.timestamp {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: var(--text-subtle);
+}
+
+/* Action Buttons */
+.actionRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.icsButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--accent-vermilion);
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.icsButton:hover {
+  background-color: var(--accent-vermilion-hover);
+  transform: translateY(-1px);
+}
+
+.myPassesButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--text-ink);
+  color: var(--bg-canvas);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.myPassesButton:hover {
+  background-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.browseButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-rule);
+  color: var(--text-ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.75rem 1.125rem;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.browseButton:hover {
+  border-color: var(--accent-vermilion);
+  color: var(--accent-vermilion);
+}
+
+@media (max-width: 600px) {
+  .eventDetailsGrid {
+    grid-template-columns: 1fr;
+  }
+  .stubBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .actionRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .icsButton, .myPassesButton, .browseButton {
+    justify-content: center;
+  }
+}
