@@ -1,0 +1,117 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--bg-overlay);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  overflow-y: auto;
+  animation: fadeIn 200ms ease forwards;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-canvas);
+  border: 2px solid var(--border-strong);
+  box-shadow: 6px 6px 0px var(--border-strong);
+  border-radius: var(--radius-xs);
+  margin: auto;
+  animation: scaleUp 250ms var(--ease-editorial) forwards;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem 1.75rem 1.25rem;
+  border-bottom: 1px solid var(--border-rule);
+  background-color: var(--bg-surface);
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-vermilion);
+  margin-bottom: 0.25rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 3vw, 1.625rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-ink);
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.closeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-rule);
+  background-color: var(--bg-card);
+  color: var(--text-ink);
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+  margin-left: 1rem;
+}
+
+.closeBtn:hover {
+  background-color: var(--accent-vermilion);
+  color: #FFFFFF;
+  border-color: var(--accent-vermilion);
+}
+
+.body {
+  padding: 1.75rem;
+  overflow-y: auto;
+}
+
+@media (max-width: 640px) {
+  .backdrop {
+    padding: 0.75rem;
+    align-items: flex-end;
+  }
+  .modal {
+    max-height: 94vh;
+  }
+  .header {
+    padding: 1.25rem 1.25rem 1rem;
+  }
+  .body {
+    padding: 1.25rem;
+  }
+}

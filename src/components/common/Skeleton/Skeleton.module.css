@@ -1,0 +1,90 @@
+.cardSkeleton {
+  border: 1px solid var(--border-rule);
+  background-color: var(--bg-card);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageShimmer {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(
+    90deg,
+    var(--bg-surface) 0%,
+    var(--border-rule) 50%,
+    var(--bg-surface) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.contentWrap {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.topRow, .bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.line {
+  background: linear-gradient(
+    90deg,
+    var(--bg-surface) 0%,
+    var(--border-rule) 50%,
+    var(--bg-surface) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-xs);
+}
+
+.badgeLine {
+  width: 70px;
+  height: 18px;
+}
+
+.stampLine {
+  width: 50px;
+  height: 18px;
+}
+
+.titleLine {
+  width: 90%;
+  height: 22px;
+}
+
+.titleLine2 {
+  width: 65%;
+  height: 22px;
+}
+
+.metaLine {
+  width: 50%;
+  height: 16px;
+}
+
+.priceLine {
+  width: 60px;
+  height: 20px;
+}
+
+.btnLine {
+  width: 80px;
+  height: 20px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

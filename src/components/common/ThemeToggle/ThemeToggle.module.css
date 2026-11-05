@@ -1,0 +1,53 @@
+.toggleBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-rule);
+  background-color: var(--bg-card);
+  color: var(--text-ink);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+  overflow: hidden;
+}
+
+.toggleBtn:hover {
+  border-color: var(--accent-vermilion);
+  transform: translateY(-1px);
+}
+
+.iconWrap {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-slow);
+}
+
+.sunIcon, .moonIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity var(--transition-normal), transform var(--transition-slow);
+}
+
+.sunIcon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.moonIcon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.6);
+}
+
+.isDark .sunIcon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.6);
+}
+
+.isDark .moonIcon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
